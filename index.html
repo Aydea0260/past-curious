@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Past.Curious — The past gets stranger</title>
+<meta name="description" content="Past.Curious is a museum-format history channel by Great Studios. Short episodes about the true stories history forgot to mention. The past gets stranger.">
+<meta property="og:title" content="Past.Curious — The past gets stranger">
+<meta property="og:description" content="Short, museum-format history episodes from Great Studios. Watch EP02: The President Who Never Lived in the White House.">
+<meta property="og:type" content="website">
+<meta property="og:video" content="https://www.youtube.com/watch?v=bYJ8l1jHsNw">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d0b09; --ink2:#151009; --panel:#1a1409; --panel2:#211a0e;
+    --brass:#c9a227; --brass2:#e8c766; --bone:#f2ead8; --bone2:#cfc4ab;
+    --muted:#9b8f76; --line:rgba(201,162,39,.28); --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--bone);font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,'Times New Roman',serif}
+  a{color:var(--brass2)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(13,11,9,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .brand{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:1.35rem;color:var(--bone);text-decoration:none;letter-spacing:.01em}
+  .brand span{color:var(--brass)}
+  .navlinks{display:flex;gap:22px;align-items:center}
+  .navlinks a{color:var(--bone2);text-decoration:none;font-size:.92rem;font-weight:500}
+  .navlinks a:hover{color:var(--brass2)}
+  .navsocial{display:flex;gap:10px}
+  .iconbtn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--line);border-radius:999px;color:var(--brass2);text-decoration:none}
+  .iconbtn:hover{background:var(--panel2)}
+  .iconbtn svg{width:18px;height:18px;fill:currentColor}
+  @media(max-width:720px){.navlinks a:not(.keep){display:none}}
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:88px 0 72px;background:
+    radial-gradient(900px 480px at 85% -10%, rgba(201,162,39,.16), transparent 60%),
+    radial-gradient(700px 420px at 0% 110%, rgba(201,162,39,.08), transparent 55%),
+    linear-gradient(180deg,var(--ink2),var(--ink))}
+  .eyebrow{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass2);margin-bottom:22px}
+  .hero h1{font-size:clamp(2.9rem,8vw,5.2rem);font-weight:900;line-height:1.02;letter-spacing:-.01em}
+  .hero h1 .dot{color:var(--brass)}
+  .tagline{font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:clamp(1.3rem,3.4vw,1.9rem);color:var(--brass2);margin-top:14px}
+  .hero p.lede{max-width:620px;color:var(--bone2);font-size:1.06rem;margin-top:18px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;border:1px solid transparent}
+  .btn-gold{background:linear-gradient(180deg,var(--brass2),var(--brass));color:#1a1405}
+  .btn-gold:hover{filter:brightness(1.07)}
+  .btn-ghost{border-color:var(--line);color:var(--bone)}
+  .btn-ghost:hover{background:var(--panel2)}
+  .btn svg{width:18px;height:18px;fill:currentColor}
+  .strip{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+  .strip b{color:var(--bone);font-weight:600}
+  /* ---------- sections ---------- */
+  section{padding:72px 0}
+  .kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);font-weight:700;margin-bottom:10px}
+  h2{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:700;line-height:1.15}
+  .sub{color:var(--bone2);max-width:640px;margin-top:12px}
+  /* ---------- episodes ---------- */
+  #episodes{background:linear-gradient(180deg,var(--ink),var(--ink2))}
+  .ep-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;margin-top:36px}
+  @media(max-width:860px){.ep-grid{grid-template-columns:1fr}}
+  .ep-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .ep-frame{position:relative;padding-top:56.25%;background:#000}
+  .ep-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .ep-body{padding:24px}
+  .badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:999px;background:rgba(201,162,39,.15);color:var(--brass2);border:1px solid var(--line)}
+  .badge.soon{background:transparent;color:var(--muted)}
+  .ep-body h3{font-size:1.45rem;line-height:1.25;margin:14px 0 10px}
+  .ep-body p{color:var(--bone2);font-size:.98rem}
+  .ep-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .btn.small{padding:10px 18px;font-size:.92rem}
+  .ep-side{display:flex;flex-direction:column;gap:26px}
+  .ep-poster{flex:1;display:flex;flex-direction:column;justify-content:flex-end;min-height:230px;padding:24px;border-radius:var(--radius);border:1px dashed var(--line);background:
+    radial-gradient(500px 260px at 80% 0%, rgba(201,162,39,.12), transparent 60%),var(--panel)}
+  .ep-poster h3{font-size:1.5rem;margin:12px 0 8px}
+  .ep-poster p{color:var(--muted);font-size:.95rem}
+  /* ---------- shop ---------- */
+  .shop-box{margin-top:36px;border:1px solid var(--line);border-radius:var(--radius);padding:38px;background:
+    radial-gradient(600px 300px at 100% 0%, rgba(201,162,39,.13), transparent 55%),var(--panel);text-align:left}
+  .shop-box h3{font-size:1.6rem;margin-bottom:10px}
+  .shop-box p{color:var(--bone2);max-width:560px}
+  /* STORE SLOTS (eBay, Etsy, Shopify) are pending — see the Shop section comment. */
+  .shop-pending{display:inline-block;margin-top:20px;padding:11px 20px;border-radius:999px;border:1px solid var(--line);color:var(--muted);font-weight:600;font-size:.95rem}
+  /* ---------- about / news ---------- */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:36px}
+  @media(max-width:860px){.two-col{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .card h3{font-size:1.3rem;margin-bottom:12px}
+  .card p{color:var(--bone2);font-size:.98rem}
+  .news-item{padding:16px 0;border-bottom:1px solid rgba(201,162,39,.14)}
+  .news-item:last-child{border-bottom:0}
+  .news-item time{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+  .news-item p{margin-top:4px}
+  /* ---------- faq ---------- */
+  #faq{background:linear-gradient(180deg,var(--ink2),var(--ink))}
+  .faq-list{margin-top:32px;display:flex;flex-direction:column;gap:12px}
+  details{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:0 22px}
+  summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:1.02rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--brass);font-size:1.4rem;font-weight:400}
+  details[open ] summary::after{content:"–"}
+  details p{color:var(--bone2);padding:0 0 20px;font-size:.97rem}
+  /* ---------- contact / newsletter ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:36px}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+  form{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+  input[type=email]{flex:1;min-width:220px;background:var(--ink);border:1px solid var(--line);border-radius:999px;padding:13px 20px;color:var(--bone);font-size:1rem}
+  input[type=email]::placeholder{color:var(--muted)}
+  button[type=submit]{cursor:pointer}
+  .fineprint{color:var(--muted);font-size:.85rem;margin-top:12px}
+  .form-msg{margin-top:12px;color:var(--brass2);font-size:.95rem;display:none}
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:38px 0 46px;background:var(--ink2)}
+  .foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+  .foot p{color:var(--muted);font-size:.9rem}
+  .foot .serif{color:var(--bone2);font-style:italic}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Past<span>.</span>Curious</a>
+    <nav class="navlinks">
+      <a href="#episodes">Episodes</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="keep">Contact</a>
+    </nav>
+    <div class="navsocial">
+      <a class="iconbtn" href="https://www.youtube.com/channel/UCk3ecccUIlpYhdNxgnHJOuw" target="_blank" rel="noopener" aria-label="Past.Curious on YouTube">
+        <svg viewBox="0 0 24 24"><path d="M23 7.2s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.6 3.6 12 3.6 12 3.6s-4.6 0-7.7.3c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S.8 9.1.8 11v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.6 1 1.9.2 7.5.3 7.5.3s4.6 0 7.7-.4c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8V11c0-1.9-.2-3.8-.2-3.8zM9.7 15V8.4l6.2 3.3L9.7 15z"/></svg>
+      </a>
+      <a class="iconbtn" href="https://www.facebook.com/Past.Curious" target="_blank" rel="noopener" aria-label="Past.Curious on Facebook">
+        <svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.2v3h2.5v7h2.8z"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <span class="eyebrow">A Great Studios history channel</span>
+      <h1>Past<span class="dot">.</span>Curious</h1>
+      <p class="tagline">The past gets stranger.</p>
+      <p class="lede">Short, museum-format episodes about the true stories history forgot to mention — the presidents who never slept in their own palace, the bridge an empire built and then tore down, the details too odd for the textbooks.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://www.youtube.com/watch?v=bYJ8l1jHsNw" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch the latest episode
+        </a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/Past.Curious" target="_blank" rel="noopener">Follow on Facebook</a>
+      </div>
+      <div class="strip">
+        <span><b>Now showing:</b> EP02 on YouTube</span>
+        <span><b>Format:</b> ~3-minute museum episodes</span>
+        <span><b>Also on:</b> Facebook (Reels &amp; Stories)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EPISODES -->
+  <section id="episodes">
+    <div class="wrap">
+      <p class="kicker">The collection</p>
+      <h2>Episodes</h2>
+      <p class="sub">Every episode starts from a verified historical fact — and then follows it somewhere stranger. Watch here, or open the episode on YouTube.</p>
+
+      <div class="ep-grid">
+        <article class="ep-card">
+          <div class="ep-frame">
+            <iframe src="https://www.youtube.com/embed/bYJ8l1jHsNw" title="The President Who Never Lived in the White House | Past.Curious EP02" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="ep-body">
+            <span class="badge">EP02 · Now showing</span>
+            <h3>The President Who Never Lived in the White House</h3>
+            <p>George Washington chose the site, watched the walls go up — and never spent a single night in the White House. It was John Adams who first moved in, on November 1, 1800, into a house still smelling of wet plaster.</p>
+            <div class="ep-actions">
+              <a class="btn btn-gold small" href="https://www.youtube.com/watch?v=bYJ8l1jHsNw" target="_blank" rel="noopener">Watch on YouTube</a>
+              <a class="btn btn-ghost small" href="https://www.facebook.com/reel/1664761451749145" target="_blank" rel="noopener">Watch the Reel</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="ep-side">
+          <div class="ep-poster">
+            <span class="badge soon">EP01 · In production</span>
+            <h3>The Bridge Caesar Tore Down</h3>
+            <p>Julius Caesar's engineers raised a bridge across the Rhine in ten days — marched an army over it — and then Caesar had it destroyed. The first episode of the series is in production.</p>
+          </div>
+          <div class="card">
+            <h3>More is being catalogued</h3>
+            <p>The archive is already mapped: a giraffe who walked across France, a war declared on emus, a pig who nearly started a war, a bear who held military rank. New episodes join this feed as they leave production.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section id="shop" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">Take the past home</p>
+      <h2>Shop &amp; merch</h2>
+      <p class="sub">Prints, apparel and curious objects from the episodes, across the channel's three stores. Each store opens from here as soon as it is live.</p>
+      <!-- STORE SLOTS: eBay, Etsy, Shopify — all three pending. Past.Curious has
+           NO verified URL in any of them yet; insert each verified store URL in
+           its card when available. Never put an invented URL. -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px">
+        <div class="card" style="padding:24px">
+          <span class="badge soon">Pending</span>
+          <h3 style="margin-top:12px">eBay</h3>
+          <p>The Past.Curious store on eBay is in preparation.</p>
+          <span class="shop-pending" style="margin-top:16px">Store link coming soon</span>
+        </div>
+        <div class="card" style="padding:24px">
+          <span class="badge soon">Pending</span>
+          <h3 style="margin-top:12px">Etsy</h3>
+          <p>The Past.Curious store on Etsy is in preparation.</p>
+          <span class="shop-pending" style="margin-top:16px">Store link coming soon</span>
+        </div>
+        <div class="card" style="padding:24px">
+          <span class="badge soon">Pending</span>
+          <h3 style="margin-top:12px">Shopify</h3>
+          <p>The Past.Curious store on Shopify is in preparation.</p>
+          <span class="shop-pending" style="margin-top:16px">Store link coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + NEWS -->
+  <section id="about" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">About the channel</p>
+      <h2>A museum you can watch in three minutes</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>What Past.Curious is</h3>
+          <p>Past.Curious is the English-language history channel of <b>Great Studios</b>. Each episode is built like a museum exhibit: one object, one moment, one verified fact — presented up close, with the strange detail the textbooks leave out.</p>
+          <p style="margin-top:12px">No myths invented, no history faked: when a beloved story turns out to be legend, the episode says so — and tells you what really happened instead.</p>
+        </div>
+        <div class="card">
+          <h3>News</h3>
+          <div class="news-item">
+            <time>Oct 27, 2026</time>
+            <p><b>EP02 premieres.</b> “The President Who Never Lived in the White House” is live on YouTube, with the Reel and first Story on Facebook.</p>
+          </div>
+          <div class="news-item">
+            <time>In production</time>
+            <p><b>EP01 — “The Bridge Caesar Tore Down”</b> — is in production and will take its place at the head of the feed.</p>
+          </div>
+          <div class="news-item">
+            <time>Coming up</time>
+            <p><b>EP03–EP12 are mapped</b> — ten new verified curiosities are queued for production.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSTELLATION: every property of Past.Curious, cross-linked.
+       Live destinations link out; not-yet-live destinations stay as pending
+       slots with NO URL until they exist (GitHub page: blocked on credential
+       renewal; Google Site: built by a parallel line). Portal content is born
+       from the canonical source — the series' Drive folder + Monday record —
+       nothing lives only on this page. -->
+  <section id="everywhere" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">One channel, every door</p>
+      <h2>Find Past.Curious everywhere</h2>
+      <p class="sub">This portal is one door into the channel — the episodes and the archive live on the channel's official pages, all connected to each other.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:32px">
+        <div class="card" style="padding:22px">
+          <span class="badge">Live</span>
+          <h3 style="margin-top:12px">YouTube</h3>
+          <p>The channel — every episode in full.</p>
+          <div class="ep-actions"><a class="btn btn-ghost small" href="https://www.youtube.com/channel/UCk3ecccUIlpYhdNxgnHJOuw" target="_blank" rel="noopener">@PastCuriousStories</a></div>
+        </div>
+        <div class="card" style="padding:22px">
+          <span class="badge">Live</span>
+          <h3 style="margin-top:12px">Facebook</h3>
+          <p>The page — Reels, Stories and community posts.</p>
+          <div class="ep-actions"><a class="btn btn-ghost small" href="https://www.facebook.com/Past.Curious" target="_blank" rel="noopener">Past.Curious page</a></div>
+        </div>
+        <div class="card" style="padding:22px">
+          <span class="badge">Live</span>
+          <h3 style="margin-top:12px">Series archive</h3>
+          <p>The canonical archive of the series on Google Drive.</p>
+          <div class="ep-actions"><a class="btn btn-ghost small" href="https://drive.google.com/drive/folders/18WrqAIBZeUC2GdnVAkqX8_cHZffRPHd3" target="_blank" rel="noopener">Open the archive</a></div>
+        </div>
+        <div class="card" style="padding:22px">
+          <span class="badge soon">Pending</span>
+          <h3 style="margin-top:12px">GitHub page</h3>
+          <p>The channel's GitHub home joins the constellation as soon as it is live.</p>
+          <span class="shop-pending" style="margin-top:14px">Coming soon</span>
+        </div>
+        <div class="card" style="padding:22px">
+          <span class="badge soon">Pending</span>
+          <h3 style="margin-top:12px">Google Site</h3>
+          <p>The Google Site edition of the portal is on its way and will link from here.</p>
+          <span class="shop-pending" style="margin-top:14px">Coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <p class="kicker">Good questions</p>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <details>
+          <summary>What is Past.Curious?</summary>
+          <p>Past.Curious is a museum-format history channel by Great Studios. Each episode takes one verified historical fact and follows it somewhere stranger — in about three minutes.</p>
+        </details>
+        <details>
+          <summary>Where can I watch the episodes?</summary>
+          <p>On YouTube, on the Past.Curious channel (@PastCuriousStories), and on the Past.Curious Facebook page, where episodes also appear as Reels and Stories.</p>
+        </details>
+        <details>
+          <summary>Are the stories true?</summary>
+          <p>Yes — episodes start from documented facts (dates, records, contemporary accounts). When a famous anecdote is actually a myth, the episode flags it as a myth and tells the verified version.</p>
+        </details>
+        <details>
+          <summary>How often do new episodes come out?</summary>
+          <p>Past.Curious is a new series: EP02 is the first published episode, EP01 is in production, and ten further episodes (EP03–EP12) are already mapped. Follow the channel on YouTube or Facebook to catch each release.</p>
+        </details>
+        <details>
+          <summary>Where can I buy Past.Curious merch?</summary>
+          <p>The shop is in preparation and will open from the Shop section of this page. Until then, the fastest way to hear about the first drop is to follow the channel.</p>
+        </details>
+        <details>
+          <summary>Who makes Past.Curious?</summary>
+          <p>Past.Curious is produced by Great Studios as part of its English-language history line, and shared through the Fundación Contacto Humano and Scope to the Future distribution circuit.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT + NEWSLETTER -->
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">Stay curious</p>
+      <h2>Contact &amp; the mailing list</h2>
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Talk to the channel</h3>
+          <p>Questions, episode suggestions, a strange fact you want checked? The fastest route is a message to the Past.Curious Facebook page.</p>
+          <div class="ep-actions">
+            <a class="btn btn-gold small" href="https://www.facebook.com/Past.Curious" target="_blank" rel="noopener">Message us on Facebook</a>
+            <a class="btn btn-ghost small" href="https://www.youtube.com/channel/UCk3ecccUIlpYhdNxgnHJOuw" target="_blank" rel="noopener">Visit the YouTube channel</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Get new episodes by email</h3>
+          <p>Join the list and we'll write when a new episode leaves the museum vault.</p>
+          <!-- NEWSLETTER: front-end component only — no backend connected yet. Wire to the list provider before public launch. -->
+          <form id="newsletter-form" novalidate>
+            <input type="email" id="newsletter-email" placeholder="you@example.com" aria-label="Email address" required>
+            <button class="btn btn-gold small" type="submit">Join the list</button>
+          </form>
+          <p class="form-msg" id="form-msg">The mailing list opens very soon — follow us on YouTube or Facebook so you don't miss the first letter.</p>
+          <p class="fineprint">One letter per episode. No spam, ever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top" style="font-size:1.1rem">Past<span>.</span>Curious</a>
+    <p class="serif">The past gets stranger.</p>
+    <p>© <span id="year">2026</span> Past.Curious · A Great Studios channel.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('newsletter-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('form-msg').style.display = 'block';
+  });
+</script>
+</body>
+</html>
